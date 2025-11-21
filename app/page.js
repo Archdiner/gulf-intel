@@ -28,7 +28,7 @@ import ContactModal from '@/components/Contact_Form';
 import GlitchText from '@/components/GlitchText';
 import ClientCard from '@/components/ClientCard';
 
-export default function App() {
+export default function Page() {
   const [activeTab, setActiveTab] = useState('CONSULTATION_PHASE');
   const [menuOpen, setMenuOpen] = useState(false);
   const [contactOpen, setContactOpen] = useState(false);
