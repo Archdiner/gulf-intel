@@ -7,11 +7,14 @@ const DigitalSand = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
+    
     const ctx = canvas.getContext('2d');
     let animationFrameId;
     let particles = [];
 
     const resizeCanvas = () => {
+      if (!canvas) return;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
       initParticles();
@@ -30,6 +33,7 @@ const DigitalSand = () => {
       }
 
       update(mouse) {
+        if (!canvas) return;
         this.x += this.speedX;
         this.y += this.speedY;
         const dx = mouse.x - this.x;
@@ -49,6 +53,7 @@ const DigitalSand = () => {
       }
 
       draw() {
+        if (!ctx) return;
         ctx.fillStyle = `${this.colorBase}${this.opacity})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -58,6 +63,7 @@ const DigitalSand = () => {
 
     const initParticles = () => {
       particles = [];
+      if (!canvas) return;
       const numberOfParticles = (canvas.width * canvas.height) / 7000; 
       for (let i = 0; i < numberOfParticles; i++) {
         particles.push(new Particle());
@@ -66,7 +72,13 @@ const DigitalSand = () => {
 
     let mouse = { x: -1000, y: -1000 };
 
+    const handleMouseMove = (e) => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    };
+
     const animate = () => {
+      if (!canvas || !ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       for (let i = 0; i < particles.length; i++) {
         particles[i].update(mouse);
@@ -76,17 +88,17 @@ const DigitalSand = () => {
     };
 
     window.addEventListener('resize', resizeCanvas);
-    window.addEventListener('mousemove', (e) => {
-      mouse.x = e.x;
-      mouse.y = e.y;
-    });
+    window.addEventListener('mousemove', handleMouseMove);
 
     resizeCanvas();
     animate();
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
+      window.removeEventListener('mousemove', handleMouseMove);
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
     };
   }, []);
 
