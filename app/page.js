@@ -164,10 +164,13 @@ export default function Page() {
                   We ensure fluid animations, offline-first architecture, and a seamless UX that puts your business in your customer's pocket.
                 </p>
               </div>
-              <div className="mt-8 h-48 bg-gradient-to-t from-purple-900/20 to-transparent rounded-xl border border-white/5 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Activity className="text-purple-500/50 w-full h-12" />
-                </div>
+              <div className="mt-8 h-48 rounded-xl border border-white/5 relative overflow-hidden">
+                <Image 
+                  src="/projects/mobile_app.png" 
+                  alt="Mobile App Screenshot" 
+                  fill
+                  className="object-cover"
+                />
               </div>
             </TiltCard>
 
@@ -282,7 +285,7 @@ export default function Page() {
       <section id="clients" className="py-20 px-6 bg-slate-950 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-sm font-bold text-slate-500 uppercase tracking-widest mb-2">Our Clients</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-4 tracking-tighter">OUR <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">CLIENTS</span></h2>
             <p className="text-slate-400">Private partnerships across diverse sectors.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
@@ -303,52 +306,52 @@ export default function Page() {
             <p className="text-slate-400">Technical excellence from Ivy League institutions.</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
             {/* Asad */}
-            <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6 group hover:border-blue-500 transition-colors relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 rounded-bl-full -mr-10 -mt-10 transition-all group-hover:bg-blue-500/20"></div>
-              <div className="w-24 h-24 rounded-full bg-slate-800 border border-slate-700 group-hover:border-blue-400 transition-colors shrink-0 shadow-lg overflow-hidden">
+            <div className="bg-slate-900 border border-slate-800 p-10 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-8 group hover:border-blue-500 transition-colors relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 rounded-bl-full -mr-12 -mt-12 transition-all group-hover:bg-blue-500/20"></div>
+              <div className="w-32 h-32 rounded-full bg-slate-800 border border-slate-700 group-hover:border-blue-400 transition-colors shrink-0 shadow-lg overflow-hidden">
                 <Image 
                   src="/team/asad.JPG" 
                   alt="Asad Rizvi" 
-                  width={96} 
-                  height={96} 
+                  width={128} 
+                  height={128} 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="text-center sm:text-left relative z-10">
-                <h3 className="text-2xl font-bold text-white font-mono">ASAD RIZVI</h3>
-                <p className="text-blue-400 text-xs font-bold tracking-widest mb-3 uppercase">Cornell University</p>
-                <p className="text-slate-400 text-sm mb-4 leading-relaxed">
+                <h3 className="text-3xl font-bold text-white font-mono mb-2">ASAD RIZVI</h3>
+                <p className="text-blue-400 text-sm font-bold tracking-widest mb-4 uppercase">Cornell University</p>
+                <p className="text-slate-400 text-base mb-6 leading-relaxed">
                   Gen AI expert with deep industry experience. Specialized in generative models and large-scale system implementation.
                 </p>
                 <div className="flex justify-center sm:justify-start gap-4">
-                  <a href="#" className="text-slate-600 hover:text-white transition-colors"><Linkedin size={18} /></a>
-                  <a href="#" className="text-slate-600 hover:text-white transition-colors"><Twitter size={18} /></a>
+                  <a href="https://www.linkedin.com/in/asad-rizvi-02a1782a2" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-white transition-colors"><Linkedin size={20} /></a>
+                  <a href="https://x.com/carne_asado" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-white transition-colors"><Twitter size={20} /></a>
                 </div>
               </div>
             </div>
 
             {/* Sid */}
-            <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6 group hover:border-purple-500 transition-colors relative overflow-hidden">
-               <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/10 rounded-bl-full -mr-10 -mt-10 transition-all group-hover:bg-purple-500/20"></div>
-              <div className="w-24 h-24 rounded-full bg-slate-800 border border-slate-700 group-hover:border-purple-400 transition-colors shrink-0 shadow-lg overflow-hidden">
+            <div className="bg-slate-900 border border-slate-800 p-10 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-8 group hover:border-purple-500 transition-colors relative overflow-hidden">
+               <div className="absolute top-0 right-0 w-24 h-24 bg-purple-500/10 rounded-bl-full -mr-12 -mt-12 transition-all group-hover:bg-purple-500/20"></div>
+              <div className="w-32 h-32 rounded-full bg-slate-800 border border-slate-700 group-hover:border-purple-400 transition-colors shrink-0 shadow-lg overflow-hidden">
                 <Image 
                   src="/team/sid.jpeg" 
                   alt="Siddharth Rout" 
-                  width={96} 
-                  height={96} 
+                  width={128} 
+                  height={128} 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="text-center sm:text-left relative z-10">
-                <h3 className="text-2xl font-bold text-white font-mono">SIDDHARTH ROUT</h3>
-                <p className="text-purple-400 text-xs font-bold tracking-widest mb-3 uppercase">Columbia University</p>
-                <p className="text-slate-400 text-sm mb-4 leading-relaxed">
+                <h3 className="text-3xl font-bold text-white font-mono mb-2">SIDDHARTH ROUT</h3>
+                <p className="text-purple-400 text-sm font-bold tracking-widest mb-4 uppercase">Columbia University</p>
+                <p className="text-slate-400 text-base mb-6 leading-relaxed">
                   Entrepreneurship & Finance background. Driving technical innovation in high-growth sectors.
                 </p>
                 <div className="flex justify-center sm:justify-start gap-4">
-                  <a href="#" className="text-slate-600 hover:text-white transition-colors"><Linkedin size={18} /></a>
+                  <a href="https://www.linkedin.com/in/siddharth-rout-69a0191b9/" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-white transition-colors"><Linkedin size={20} /></a>
                 </div>
               </div>
             </div>
