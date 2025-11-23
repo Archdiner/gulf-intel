@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { 
   Brain, 
   Globe, 
@@ -306,8 +307,14 @@ export default function Page() {
             {/* Asad */}
             <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6 group hover:border-blue-500 transition-colors relative overflow-hidden">
               <div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 rounded-bl-full -mr-10 -mt-10 transition-all group-hover:bg-blue-500/20"></div>
-              <div className="w-24 h-24 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:border-blue-400 transition-colors shrink-0 shadow-lg">
-                <Users size={32} className="text-slate-400 group-hover:text-blue-400" />
+              <div className="w-24 h-24 rounded-full bg-slate-800 border border-slate-700 group-hover:border-blue-400 transition-colors shrink-0 shadow-lg overflow-hidden">
+                <Image 
+                  src="/team/asad.JPG" 
+                  alt="Asad Rizvi" 
+                  width={96} 
+                  height={96} 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="text-center sm:text-left relative z-10">
                 <h3 className="text-2xl font-bold text-white font-mono">ASAD RIZVI</h3>
@@ -325,8 +332,14 @@ export default function Page() {
             {/* Sid */}
             <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl flex flex-col sm:flex-row items-center sm:items-start gap-6 group hover:border-purple-500 transition-colors relative overflow-hidden">
                <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/10 rounded-bl-full -mr-10 -mt-10 transition-all group-hover:bg-purple-500/20"></div>
-              <div className="w-24 h-24 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 group-hover:border-purple-400 transition-colors shrink-0 shadow-lg">
-                <Code size={32} className="text-slate-400 group-hover:text-purple-400" />
+              <div className="w-24 h-24 rounded-full bg-slate-800 border border-slate-700 group-hover:border-purple-400 transition-colors shrink-0 shadow-lg overflow-hidden">
+                <Image 
+                  src="/team/sid.jpeg" 
+                  alt="Siddharth Rout" 
+                  width={96} 
+                  height={96} 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="text-center sm:text-left relative z-10">
                 <h3 className="text-2xl font-bold text-white font-mono">SIDDHARTH ROUT</h3>
