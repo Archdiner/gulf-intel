@@ -112,7 +112,12 @@ export default function Page() {
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out"></div>
               <span className="relative flex items-center gap-2">START TRANSFORMATION <ArrowRight size={18} /></span>
             </button>
-            <button className="px-8 py-4 border border-slate-700 text-slate-300 font-mono text-sm hover:border-blue-500 hover:text-blue-400 transition-colors bg-slate-900/50 backdrop-blur-sm">
+            <button 
+              onClick={() => {
+                document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              className="px-8 py-4 border border-slate-700 text-slate-300 font-mono text-sm hover:border-blue-500 hover:text-blue-400 transition-colors bg-slate-900/50 backdrop-blur-sm"
+            >
               SEE OUR WORK
             </button>
           </div>
